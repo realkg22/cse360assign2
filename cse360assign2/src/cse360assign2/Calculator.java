@@ -20,52 +20,53 @@ public class Calculator {
 	 * @return the current value of the Calculator's total variable.
 	 */
 	public int getTotal () {
-		return total;
+		return 0;
 	}
 	
 	/*
 	 * This method will add the specified value in the parameter to the total variable.
 	 * 
 	 * @oaram  value will specify the value to add to the total variable
+	 * @return total will return the new value of the total variable after the add operation
 	 */
 	public void add (int value) {
-		total += value;
+		
 	}
 	
 	/*
 	 * This method will subtract the value in the parameter from the total variable.
 	 * 
 	 * @param value will specify the value to subtract from the total variable.
+	 * @return total will return the new value of the total variable after the subtract operation
 	 */
 	public void subtract (int value) {
-		total -= value;
+		
 	}
 	
 	/*
 	 * This method will multiply the value in the parameter by the specified value.
 	 * 
 	 * @param value will specify the value to multiply the total variable by.
+	 * @return total will return the new value of the total variable after the multiply operation.
 	 */
 	public void multiply (int value) {
-		total *= value;
+		
 	}
 	
 	/*
-	 * This method will divide the total variable by the specified value. If the value is 0, then we change the total value to 0.
+	 * This method will divide the total variable by the specified value.
 	 * 
 	 * @param value will specify what value to divide the total variable by.
+	 * @return total will return the new value of the total variable after the divide operation.
 	 */
 	public void divide (int value) {
-		if(value == 0) {
-			total = 0;
-		}
-		else {
-			total /= value;
-		}
+		
 	}
 	
 	/*
 	 * This method will return all the performed operations in a single line
+	 * 
+	 * @return will return a String of all the performed operations from when we ran the calculator.
 	 */
 	public String getHistory () {
 		return "";
