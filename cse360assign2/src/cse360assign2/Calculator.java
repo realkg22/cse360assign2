@@ -1,11 +1,21 @@
 package cse360assign2;
-
+/*
+ * Represents a calculator that is able to perform add, subtract, multiply, and divide operations.
+ * 
+ * @author Kyle Gonzalez
+ */
 public class Calculator {
 	
 	/*
 	 * Keeps track of the current value of our number that we are manipulating.
 	 */
 	private int total;
+	
+	/*
+	 * Keeps a string of all the performed operations, will be concatenated to for each operation.
+	 * It is automatically set to 0.
+	 */
+	private String fullHistory = Integer.toString(total);
 	
 	/*
 	 * Constructor that allows usage of the methods in this class that will be used to manipulate the total variable.
@@ -30,6 +40,7 @@ public class Calculator {
 	 */
 	public void add (int value) {
 		total += value;
+		fullHistory += " + " + Integer.toString(value);
 	}
 	
 	/*
@@ -39,6 +50,7 @@ public class Calculator {
 	 */
 	public void subtract (int value) {
 		total -= value;
+		fullHistory += " - " + Integer.toString(value);
 	}
 	
 	/*
@@ -48,6 +60,7 @@ public class Calculator {
 	 */
 	public void multiply (int value) {
 		total *= value;
+		fullHistory += " * " + Integer.toString(value);
 	}
 	
 	/*
@@ -62,12 +75,16 @@ public class Calculator {
 		else {
 			total /= value;
 		}
+		
+		fullHistory += " / " + Integer.toString(value);
 	}
 	
 	/*
 	 * This method will return all the performed operations in a single line
+	 * 
+	 * @return fullHistory will return all the operations that have been performed on the total variable in String format.
 	 */
 	public String getHistory () {
-		return "";
+		return fullHistory;
 	}
 }
